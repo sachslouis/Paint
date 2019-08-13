@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="./css/paint.css">
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="titleStrip">
+      <div id="fileTitle"><img src="./images/paint95.jpg">Untitled - Paint</div>
+      <div id="xButtons"><button><i id="min" class="fa fa-window-minimize"></i></button><button><i id="max" class="fa fa-window-maximize"></i></button><button><i id="x" class="fa fa-window-close"></i></button></div>
+    </div>
+    <div class="menuStrip">
+      <span id="menuStrip"></span></div>
+    <div class="canvasWrapper">
+      <div class="tools">
+        <div id="buttonNode"></div>
+        <div id="test"><button style="background-color:black; width: 40px;" onclick="brushSize(1);"><button style="background-color:black; height: 7px; width: 40px;" onclick="brushSize(2);"></button> <br/><button style="background-color:black; height: 10px; width: 40px;" onclick="brushSize(3);"></button></div>
+      </div>
+      <div id="paint" onmousemove="findClick(event)" onmousedown="pressMouse(1)" onmouseup="releaseMouse(1)"
+        onmousemove="mouseDraw(point)"></div>
+    </div>
+
+    <div class="colors">
+      <div id="colorNode"></div>
+    </div>
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <script src="./js/paint.js"></script>
+
+</body>
+
+</html>
